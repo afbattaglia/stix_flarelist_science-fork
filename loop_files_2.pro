@@ -1,9 +1,10 @@
-pro loop_files2
+pro loop_files_2
 
+cd, '/home/afbattaglia/Software/stix_flarelist_science-fork/'
 data = READ_CSV('full_flarelist_with_paths.csv')
 
 
-for i = 1 ,n_elements(data.field01) do begin   ;loop through all rows in data structure
+for i = 0 ,n_elements(data.field01)-1 do begin   ;loop through all rows in data structure
     
     path_sci_file = data.FIELD16[i]
     peak_time = data.FIELD05[i]
